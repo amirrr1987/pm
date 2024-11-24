@@ -6,18 +6,18 @@ class CreateUserDto {
   id: number;
 
   @IsString()
-  @MinLength(2, { message: 'First name must be at least 2 characters long.' })
-  @MaxLength(50, { message: 'First name must not exceed 50 characters.' })
+  @MinLength(2)
+  @MaxLength(50)
   first_name: string;
 
   @IsString()
-  @MinLength(2, { message: 'Last name must be at least 2 characters long.' })
-  @MaxLength(50, { message: 'Last name must not exceed 50 characters.' })
+  @MinLength(2)
+  @MaxLength(50)
   last_name: string;
 
   @IsString()
-  @MinLength(4, { message: 'Username must be at least 4 characters long.' })
-  @MaxLength(30, { message: 'Username must not exceed 30 characters.' })
+  @MinLength(4)
+  @MaxLength(30)
   username: string;
 }
 
